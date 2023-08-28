@@ -37,6 +37,11 @@ const fetchMovieDetails = async () => {
         card.appendChild(overview);
 
         catalogContainer.appendChild(card);
+
+        // document.body.append(movie.title)
+        // document.body.append(img);
+        // document.body.append(movie.overview)
+        // console.log(overview)
     });
 
     document.body.appendChild(catalogContainer);
