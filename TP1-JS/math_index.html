@@ -1,0 +1,103 @@
+<html>
+    <head>
+        <title>
+            P&aacute;gina con Javascript.
+        </title>
+        <script language="JavaScript">
+            <!--
+                document.write ("Aqu&iacute; se ven las propiedades del objeto Math.<br>");
+
+                document.write ("La constante de Euler vale ");
+                document.write (Math.E + "<br>");
+                
+                document.write ("El logaritmo natural de 2 vale ");
+                document.write (Math.LN2 + "<br>");
+
+                document.write ("El logaritmo natural de 10 vale ");
+                document.write (Math.LN10 + "<br>");
+
+                document.write ("El logaritmo de E en base 2 vale ");
+                document.write (Math.LOG2E + "<br>");
+
+                document.write ("El logaritmo de E en base 10 vale ");
+                document.write (Math.LOG10E + "<br>");
+
+                document.write ("El n&uacute;mero PI vale ");
+                document.write (Math.PI + "<br>");
+
+                document.write ("La ra&iacute;z cuadrada de 0.5 (1/2) vale ");
+                document.write (Math.SQRT1_2 + "<br>");
+
+                document.write ("La ra&iacute;z cuadrada de 2 vale ");
+                document.write (Math.SQRT2 + "<br><br>");
+
+                function generateTable() {
+                    const tbl = document.createElement("table");
+                    const tblBody = document.createElement("tbody");
+                    const tblHeader = document.createElement("thead");
+
+                    dates_array = [
+                        '2023-11-06T02:20:33.567', '2019-12-25T08:00:40.12', '2018-06-11T05:23:59', '2017-05-06T02:20:28.19', 
+                        '2015-05-10 02:20:34.540000', '2014-03-14 09:50:11.330000', '2013-05-10 02:20:34.27130', '2013-03-14 02:20:34.540000',
+                        '2012-08-05 07:35:25.760000', '2011-11-25 17:11:54.225000', '1988-03-21'
+                    ]
+
+                    dates_array.forEach(function(date_value) {
+                        const date = new Date(date_value);
+                        console.log(date);
+                        const cell = document.createElement("td");
+                        const rowYear = document.createElement("tr");
+                        const rowMonth = document.createElement("tr");
+                        const rowDate = document.createElement("tr");
+                        const rowDay = document.createElement("tr");
+                        const rowHour = document.createElement("tr");
+                        const rowMinute = document.createElement("tr");
+                        const rowSeconds = document.createElement("tr");
+                        const rowTime = document.createElement("tr");
+                        const rowMilliseconds = document.createElement("tr");
+                        const rowYearText = document.createTextNode(`Year: ${date.getFullYear()}`);
+                        const rowMonthText = document.createTextNode(`Month: ${date.getMonth()}`);
+                        const rowDateText = document.createTextNode(`Date: ${date.getDate()}`);
+                        const rowDayText = document.createTextNode(`Week Day: ${date.getDay()}`);
+                        const rowHourText = document.createTextNode(`Hour: ${date.getHours()}`);
+                        const rowMinuteText = document.createTextNode(`Minute: ${date.getMinutes()}`);
+                        const rowSecondsText = document.createTextNode(`Seconds: ${date.getSeconds()}`);
+                        const rowMillisecondsText = document.createTextNode(`Milliseconds: ${date.getMilliseconds()}`);
+                        const rowTimeText = document.createTextNode(`Time: ${date.getTime()}`);
+                        rowYear.appendChild(rowYearText);
+                        rowMonth.appendChild(rowMonthText);
+                        rowDate.appendChild(rowDateText);
+                        rowDay.appendChild(rowDayText);
+                        rowHour.appendChild(rowHourText);
+                        rowMinute.appendChild(rowMinuteText);
+                        rowSeconds.appendChild(rowSecondsText);
+                        rowMilliseconds.appendChild(rowMillisecondsText);
+                        rowTime.appendChild(rowTimeText);
+                        cell.appendChild(rowYear);
+                        cell.appendChild(rowMonth);
+                        cell.appendChild(rowDate);
+                        cell.appendChild(rowDay);
+                        cell.appendChild(rowHour);
+                        cell.appendChild(rowMinute);
+                        cell.appendChild(rowSeconds);
+                        cell.appendChild(rowMilliseconds);
+                        cell.appendChild(rowTime);
+                        tblBody.appendChild(cell);              
+                    });
+
+                    tblHeader.textContent = "Dates";
+                    tbl.appendChild(tblHeader);
+                    tbl.appendChild(tblBody);
+                    document.body.appendChild(tbl);
+                    tbl.setAttribute("border", "2");
+                }
+
+                generateTable();
+
+                
+            //-->
+        </script>
+    </head>
+    <body>
+    </body>
+</html>
